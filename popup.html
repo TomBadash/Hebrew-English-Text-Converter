@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hebrew-English Text Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            background-color: #4299e1;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #3182ce;
+        }
+        #copyButton {
+            background-color: #48bb78;
+        }
+        #copyButton:hover {
+            background-color: #38a169;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Text Converter</h1>
+        <select id="conversionDirection">
+            <option value="engToHeb">English to Hebrew</option>
+            <option value="hebToEng">Hebrew to English</option>
+        </select>
+        <textarea id="inputText" placeholder="Enter text to convert"></textarea>
+        <button id="convertButton">Convert</button>
+        <textarea id="outputText" readonly></textarea>
+        <button id="copyButton">Copy to Clipboard</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
